@@ -1,0 +1,53 @@
+{
+  "entities": [
+    {
+      "name": "Invoice",
+      "attributes": [
+        "InvoiceNumber",
+        "InvoiceDate",
+        "PaymentTerm",
+        "DueDate",
+        "Salesman",
+        "Currency",
+        "GrossTotal",
+        "DiscountTotal",
+        "Tax",
+        "NetTotal"
+      ]
+    },
+    {
+      "name": "Customer",
+      "attributes": [
+        "CustomerName",
+        "Phone",
+        "Fax"
+      ]
+    },
+    {
+      "name": "Product",
+      "attributes": [
+        "ProductID",
+        "ProductDescription",
+        "UnitPrice",
+        "Quantity",
+        "GrossAmount",
+        "Discount",
+        "NetAmount"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "Invoice",
+      "to": "Customer",
+      "type": "One-to-One",
+      "foreign_key": "CustomerID"
+    },
+    {
+      "from": "Invoice",
+      "to": "Product",
+      "type": "One-to-Many",
+      "foreign_key": "InvoiceNumber"
+    }
+  ]
+}
