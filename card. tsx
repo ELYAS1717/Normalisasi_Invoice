@@ -1,0 +1,9 @@
+import React from 'react';
+
+export const Card = ({ children }) => (
+  <div className="p-4 shadow rounded-lg bg-white">{children}</div>
+);
+
+export const CardContent = ({ children }) => (
+  <div className="mt-2">{children}</div>
+);
