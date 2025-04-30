@@ -1,0 +1,111 @@
+import React from "react"; 
+import { Card, CardContent } from "@/components/ui/card"; 
+import { Table } from "@/components/ui/table"; 
+import { LucideIcon } from "lucide-react";
+
+const InvoiceNormalization = () => { return ( <div className="container mx-auto py-8"> <h1 className="text-2xl font-bold mb-4">Normalization of Invoice Data</h1>
+
+{/* UNF Table */}
+  <Card className="mb-8">
+    <CardContent>
+      <h2 className="text-xl font-semibold mb-4">1. UNF (Unnormalized Form)</h2>
+      <Table>
+        <thead>
+          <tr>
+            <th>Invoice No</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Salesman</th>
+            <th>Currency</th>
+            <th>Product Description</th>
+            <th>Quantity UOM</th>
+            <th>Unit Price</th>
+            <th>Gross Amt</th>
+            <th>Discount %</th>
+            <th>Discount Amt</th>
+            <th>Net Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>00000145</td>
+            <td>SAMPLE INDONESIA, PT</td>
+            <td>11-Feb-2013</td>
+            <td>DIMAS TYO</td>
+            <td>SGD</td>
+            <td>GOLD-RING, (7.49K X133)</td>
+            <td>6 pcs</td>
+            <td>19.04</td>
+            <td>114.24</td>
+            <td>0%</td>
+            <td>0.00</td>
+            <td>114.24</td>
+          </tr>
+          <tr>
+            <td>00000145</td>
+            <td>SAMPLE INDONESIA, PT</td>
+            <td>11-Feb-2013</td>
+            <td>DIMAS TYO</td>
+            <td>SGD</td>
+            <td>RING</td>
+            <td>6 pcs</td>
+            <td>325.86</td>
+            <td>1955.16</td>
+            <td>0%</td>
+            <td>0.00</td>
+            <td>1955.16</td>
+          </tr>
+          <tr>
+            <td>00000145</td>
+            <td>SAMPLE INDONESIA, PT</td>
+            <td>11-Feb-2013</td>
+            <td>DIMAS TYO</td>
+            <td>SGD</td>
+            <td>VALVE</td>
+            <td>1 pc</td>
+            <td>672.05</td>
+            <td>672.05</td>
+            <td>0%</td>
+            <td>0.00</td>
+            <td>672.05</td>
+          </tr>
+          <tr>
+            <td>00000145</td>
+            <td>SAMPLE INDONESIA, PT</td>
+            <td>11-Feb-2013</td>
+            <td>DIMAS TYO</td>
+            <td>SGD</td>
+            <td>BALL</td>
+            <td>12 pcs</td>
+            <td>37.72</td>
+            <td>452.64</td>
+            <td>0%</td>
+            <td>0.00</td>
+            <td>452.64</td>
+          </tr>
+        </tbody>
+      </Table>
+    </CardContent>
+  </Card>
+
+  {/* ERD Placeholder */}
+  <Card>
+    <CardContent>
+      <h2 className="text-xl font-semibold mb-4">ERD (Entity Relationship Diagram)</h2>
+      <p className="text-gray-600">
+        ERD representation will include the following entities:
+      </p>
+      <ul className="list-disc ml-6">
+        <li><strong>Invoice:</strong> Contains Invoice Number, Date, Customer, Salesman, and Currency.</li>
+        <li><strong>Customer:</strong> Contains Customer Name, Phone, and Fax.</li>
+        <li><strong>Product:</strong> Contains Product Description and Unit Price.</li>
+        <li><strong>Invoice Items:</strong> Maps Invoice Number to Products, Quantity, and Pricing Details.</li>
+      </ul>
+    </CardContent>
+  </Card>
+</div>
+
+); };
+
+export default InvoiceNormalization;
+
